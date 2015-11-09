@@ -1,0 +1,23 @@
+Parameter Searching
+
+This is a series of files meant to help find parameters
+consistent with target densities.  We use the 
+algebraic solutions to the model, and then use standard
+Matlab optimization routines to search through the
+38-dimensional parameter space (with constraints).
+
+Step 1a. (optional... takes about 3-4 hours to run on a modern
+desktop/laptop)
+
+>> opt_params_search
+
+Will generate param_search_results_flux_LHS_lowHV.mat
+
+Step 1b. (optional... takes a few minutes to run)
+
+>> master_pipeline
+
+Will generate ss_flux_LHS_lowHV.mat
+
+Finally, if you do regenerate this, copy the .mat files to the
+data subdirectory, one level up

@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11335,        304]
+NotebookOptionsPosition[     10619,        277]
+NotebookOutlinePosition[     10976,        293]
+CellTagsIndexPosition[     10933,        290]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"H", "=", 
+     RowBox[{"mvh", "/", 
+      RowBox[{"(", 
+       RowBox[{"betah", "*", "phivh"}], ")"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"C1", "=", 
+     RowBox[{"mvc", "/", 
+      RowBox[{"(", 
+       RowBox[{"betac", "*", "phivc"}], ")"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"E1", "=", 
+     RowBox[{"mve", "/", 
+      RowBox[{"(", 
+       RowBox[{"betae", "*", "phive"}], ")"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Z", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"pg", "/", "qz"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"qh", "*", "psizh", "*", "H"}], "+", 
+           RowBox[{"qc", "*", "psizc", "*", "C1"}], "+", 
+           RowBox[{"qe", "*", "psize", "*", "E1"}]}], ")"}]}], "-", "mz"}], 
+       ")"}], "/", 
+      RowBox[{"(", "mzp", ")"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"xin", "=", 
+     RowBox[{"xsub", "-", 
+      RowBox[{"qz", "*", "mzp", "*", 
+       RowBox[{
+        RowBox[{"Z", "^", "2"}], "/", "omega"}]}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Vc", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"muc", "*", 
+         RowBox[{"xin", "/", 
+          RowBox[{"(", 
+           RowBox[{"xin", "+", "kinc"}], ")"}]}]}], "-", 
+        RowBox[{"psizc", "*", "Z"}], "-", "minc", "-", "monc"}], ")"}], "/", 
+      "phivc"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Ve", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"mue", "*", 
+         RowBox[{"xin", "/", 
+          RowBox[{"(", 
+           RowBox[{"xin", "+", "kine"}], ")"}]}]}], "-", 
+        RowBox[{"psize", "*", "Z"}], "-", "mine", "-", "mone"}], ")"}], "/", 
+      "phive"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"aleph", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "qh"}], "*", 
+       RowBox[{"H", "/", "epsh"}], "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"psizh", "*", "Z"}], "+", "minh", "+", "monh"}], ")"}]}], 
+      "+", 
+      RowBox[{"qv", "*", "mvc", "*", "Vc"}], "+", 
+      RowBox[{"qv", "*", "mve", "*", "Ve"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"qc", "-", 
+         RowBox[{"qv", "*", "betac"}]}], ")"}], "*", "phivc", "*", "C1", "*", 
+       "Vc"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"qe", "-", 
+         RowBox[{"qv", "*", "betae"}]}], ")"}], "*", "phive", "*", "E1", "*", 
+       "Ve"}], "+", 
+      RowBox[{"pon", "*", "Z", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"qh", "*", "psizh", "*", "H"}], "+", 
+         RowBox[{"qc", "*", "psizc", "*", "C1"}], "+", 
+         RowBox[{"qe", "*", "psize", "*", "E1"}]}], ")"}]}], "+", 
+      RowBox[{"qh", "*", "monh", "*", "H"}], "+", 
+      RowBox[{"qc", "*", "monc", "*", "C1"}], "+", 
+      RowBox[{"qe", "*", "mone", "*", "E1"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Vh", "=", 
+     RowBox[{"aleph", "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"qh", "*", "phivh", "*", 
+         RowBox[{"H", "/", "epsh"}]}], "-", 
+        RowBox[{"qv", "*", "mvh"}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"qh", "-", 
+           RowBox[{"qv", "*", "betah"}]}], ")"}], "*", "phivh", "*", "H"}]}], 
+       ")"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"xon", "=", 
+     RowBox[{"kon", "*", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"phivh", "*", "Vh"}], "+", 
+         RowBox[{"psizh", "*", "Z"}], "+", "minh", "+", "monh"}], ")"}], "/", 
+       
+       RowBox[{"(", 
+        RowBox[{"muh", "-", 
+         RowBox[{"phivh", "*", "Vh"}], "-", 
+         RowBox[{"psizh", "*", "Z"}], "-", "minh", "-", "monh"}], ")"}]}]}]}],
+     ";"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.592069218966873*^9, 3.592069261161827*^9}, {
+  3.5920750756754913`*^9, 3.5920750794358883`*^9}, {3.59214128323135*^9, 
+  3.592141283371881*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"varvec", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "H", ",", "C1", ",", "E1", ",", "Z", ",", "Vh", ",", "Vc", ",", "Ve", ",",
+      "xon", ",", "xin"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.591450059429076*^9, 3.5914500922566757`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"parvec", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "muh", ",", "\n", "kon", ",", "\n", "epsh", ",", "\n", "muc", ",", "\n", 
+     "kinc", ",", "\n", "mue", ",", "\n", "kine", ",", "\n", "phivh", ",", 
+     "\n", "phivc", ",", "\n", "phive", ",", "\n", "betah", ",", "\n", 
+     "betac", ",", "\n", "betae", ",", "\n", "mvh", ",", "\n", "mvc", ",", 
+     "\n", "mve", ",", "\n", "psizh", ",", "\n", "psizc", ",", "\n", "psize", 
+     ",", "\n", 
+     RowBox[{"(*", 
+      RowBox[{"pg", ",", "\n", "pon", ",", "\n", "pin", ","}], "*)"}], "\n", 
+     "mz", ",", "\n", "mzp", ",", "\n", "pex", ",", "\n", "omega", ",", "\n", 
+     "xsub", ",", "\n", "qh", ",", "\n", "qc", ",", "\n", "qe", ",", "\n", 
+     "qz", ",", "\n", "qv", ",", "minh", ",", "\n", "minc", ",", "\n", "mine",
+      ",", "\n", "monh", ",", "\n", "monc", ",", "\n", "mone"}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5467175887464437`*^9, 3.5467175936355762`*^9}, {
+   3.5467176681138487`*^9, 3.546717672025661*^9}, {3.546718024690918*^9, 
+   3.546718027209111*^9}, {3.546718138862568*^9, 3.546718175757411*^9}, {
+   3.546718465775792*^9, 3.546718483437523*^9}, 3.546998796615631*^9, {
+   3.546998864759046*^9, 3.546998869214191*^9}, {3.547573551591325*^9, 
+   3.547573557981789*^9}, {3.547575395249874*^9, 3.5475753954570847`*^9}, {
+   3.5477522792011347`*^9, 3.547752283881194*^9}, {3.561942464217782*^9, 
+   3.56194249002488*^9}, {3.562800777651663*^9, 3.562800778127627*^9}, {
+   3.570825066073949*^9, 3.5708250744095993`*^9}, {3.576585609932365*^9, 
+   3.576585616363452*^9}, {3.576587251008911*^9, 3.576587251415873*^9}, {
+   3.591449598346932*^9, 3.591449627140053*^9}, {3.591449676168071*^9, 
+   3.591449750323007*^9}, {3.591464124935545*^9, 3.591464155676342*^9}, 
+   3.592069347430416*^9, {3.592218973635668*^9, 3.592218976887871*^9}, {
+   3.619192883667509*^9, 3.6191928866178503`*^9}, {3.6192730664754457`*^9, 
+   3.6192730693226137`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sensmat", " ", "=", " ", 
+   RowBox[{"D", "[", 
+    RowBox[{"varvec", ",", 
+     RowBox[{"{", "parvec", "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.54671791205573*^9, 3.546717912057097*^9}, {
+   3.546717943987968*^9, 3.546717954570866*^9}, {3.546718062245212*^9, 
+   3.546718064183832*^9}, {3.546718485877627*^9, 3.5467184912375717`*^9}, {
+   3.548547017631847*^9, 3.548547048917535*^9}, {3.5619425506730824`*^9, 
+   3.561942558607935*^9}, {3.561942654075459*^9, 3.5619426668149633`*^9}, {
+   3.562518747486095*^9, 3.562518751517886*^9}, {3.562800789259967*^9, 
+   3.562800793054597*^9}, {3.562801394442506*^9, 3.562801395065281*^9}, {
+   3.57082536457136*^9, 3.570825371345261*^9}, 3.5708254031922693`*^9, {
+   3.576585621275035*^9, 3.5765856282111397`*^9}, {3.5765872567698603`*^9, 
+   3.576587257216853*^9}, {3.5914501324376173`*^9, 3.591450139122031*^9}, {
+   3.592069303982828*^9, 3.592069322149516*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", "\"\</Users/btaylor40/Desktop/ISMEJ_local_matlab\>\"", 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5920753113995*^9, 3.59207537956478*^9}, {
+  3.592075418741387*^9, 3.592075419740074*^9}, {3.61885238127271*^9, 
+  3.618852395919982*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"filename", " ", "=", " ", 
+   RowBox[{"OpenWrite", "[", "\"\<dydp.m\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.59207543071017*^9, 3.592075458552833*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WriteMatlab", "[", 
+   RowBox[{
+    RowBox[{"ToMatlab", "[", "Sensmat", "]"}], ",", "filename", ",", 
+    "\"\<sensmat\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.592075466072834*^9, 3.592075534917306*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Close", "[", "filename", "]"}]], "Input",
+ CellChangeTimes->{{3.59207556386653*^9, 3.592075572772214*^9}}],
+
+Cell[BoxData["\<\"dydp.m\"\>"], "Output",
+ CellChangeTimes->{3.5922190173855057`*^9, 3.592219546537019*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"filename", " ", "=", " ", 
+   RowBox[{"OpenWrite", "[", "\"\<ystar.m\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.59207543071017*^9, 3.592075458552833*^9}, {
+  3.618852358066773*^9, 3.6188523602119207`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WriteMatlab", "[", 
+   RowBox[{
+    RowBox[{"ToMatlab", "[", "varvec", "]"}], ",", "filename", ",", 
+    "\"\<varvec\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.592075466072834*^9, 3.592075534917306*^9}, {
+  3.618852422238612*^9, 3.618852426222205*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Run", " ", "ToMatlab", " ", "package", " ", "first", " ", "in", " ", 
+    "order", " ", "for", " ", "function", " ", "to", " ", 
+    RowBox[{"work", ".", " ", "Once"}], " ", "output", " ", "scripts", " ", 
+    "are", " ", "created", " ", "it", " ", "is", " ", "useful", " ", "to", 
+    " ", "turn", " ", "them", " ", "into", " ", "functions", " ", "of", " ", 
+    "given", " ", "parameters"}], ",", " ", 
+   RowBox[{
+   "for", " ", "example", " ", "I", " ", "prepend", " ", "the", " ", "matlab",
+     " ", "script", " ", "with", " ", "the", " ", "following", " ", 
+    RowBox[{
+    "code", ":", " ", 
+     "\"\<function sensmat = dydp(p)\n\n%parameters\nmuh=p(1);\nkon=p(2);\n\
+epsh=p(3);\nmuc=p(4);\nkinc=p(5);\nmue=p(6);\nkine=p(7);\nphivh=p(8);\n\
+phivc=p(9);\nphive=p(10);\nbetah=p(11);\nbetac=p(12);\nbetae=p(13);\n\
+mvh=p(14);\nmvc=p(15);\nmve=p(16);\npsizh=p(17);\npsizc=p(18);\npsize=p(19);\n\
+pg=p(20);\npon=p(21);\npin=1-p(21)-p(20);\nmz=p(23);\nmzp=p(24);\npex=p(25);\n\
+omega=p(26);\nxsub=p(27);\nqh=p(28);\nqc=p(29);\nqe=p(30);\nqz=p(31);\n\
+qv=p(32);\nminh=p(33);\nminc=p(34);\nmine=p(35);\nmonh=p(36);\nmonc=p(37);\n\
+mone=p(38);\>\""}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.619523596635458*^9, 3.619523697852955*^9}}]
+},
+WindowSize->{745, 768},
+WindowMargins->{{83, Automatic}, {Automatic, 271}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 3942, 120, 284, "Input"],
+Cell[4502, 142, 289, 7, 28, "Input"],
+Cell[4794, 151, 1970, 32, 641, "Input"],
+Cell[6767, 185, 957, 16, 28, "Input"],
+Cell[7727, 203, 300, 7, 28, "Input"],
+Cell[8030, 212, 199, 4, 28, "Input"],
+Cell[8232, 218, 251, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[8508, 228, 130, 2, 28, "Input"],
+Cell[8641, 232, 107, 1, 28, "Output"]
+}, Open  ]],
+Cell[8763, 236, 251, 5, 28, "Input"],
+Cell[9017, 243, 298, 7, 28, "Input"],
+Cell[9318, 252, 1297, 23, 760, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

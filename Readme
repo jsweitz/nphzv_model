@@ -1,0 +1,98 @@
+NPHZ_V Codebase
+Reproducible Results Scripts and Data
+Creative Commons License BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+Copyright 2014
+Joshua Weitz
+jsweitz@gatech.edu
+
+Weitz home page
+http://ecotheory.biology.gatech.edu
+
+ISME J article
+http://www.nature.com/ismej/journal/vaop/ncurrent/abs/ismej2014220a.html
+
+Summary:
+This series of scripts can be used to recapitulate all results
+in the manuscript.  Note that due to the use of stochastic sampling,
+the exact set of results may vary, but not the statistical properties
+thereof.  The scripts should be used in the following series of steps:
+
+Step 0, add the correct paths
+Load Matlab in this directory
+>> addshared_path
+Then change directories, as appropriate
+
+Step 1, perform large-scale computation (optional)
+-- This code is the analysis subdirectory
+-- If you want to skip this step, note that you can use the
+   pre-computed data in the data subdirectory
+-- Step 1a may take several hours to complete on a desktop/laptop
+-- Step 1b should take a few minutes to complete on a desktop/laptop
+
+
+1a. Perform a nonlinear search for "targeted" parameters (optional).
+These results will be stored as:
+
+<targeted.mat>
+
+1b. Perform a LHS sampling of parameter space for "feasible" parameters.  
+These results will be stored as:
+
+<param_search_results_flux_LHS.mat>
+
+1c. Place these .mat files in the data directory 
+(which is pre-loaded with siminfo_details.mat)
+
+Note - MATLAB will report different types of "warnings", e.g.,
+
+"fmincon stopped because it exceeded the function evaluation limit
+options.MaxFunEvals  = 1000 (the selected value)."
+
+or
+
+"fmincon stopped because the size of the current step is less than the
+default value of the step size tolerance and constraints are satisfied to
+within the default value of the constraint tolerance."
+
+These are normal operations of the minimization procedure.
+
+Step 2, generate figures
+
+* Run figstab_unstab_compare.m
+-- Generates stability_solution_analysis.mat
+-- Does the stability analysis (Figure SX)
+
+* Run figdists_wv.m
+-- Generates Figure 2
+
+* Run master_pipeline_targets.m
+-- Generates ss_flux_target.mat
+
+* Run figtarget_fluxes_v2
+-- Generates Figure 3
+
+* Run figtarget_fluxes_pvals_v3
+-- Generates Figure SX (parameter value bar codes)
+
+* Run figdists_wv_nov_contours_targets.m
+-- Generates Figure 4
+
+* Run master_pipeline_taus.m
+-- Generates ss_flux_tau_target (with the turnovers)
+
+% Run figcomm_comp_twostack_targets
+-- Generates Figure 5 (community structure)
+
+% Run the four export figures
+figflux_export_contours_targets_labels.m  
+figflux_oreturn_contours_targets_labels.m
+figflux_primprod_contours_targets_labels.m
+figflux_cturnover_contours_targets_labels.m
+
+% Run figbiomass_turnover.m
+Generates biomass turnover in Figure S4
+
+% Run fignpp_baseline.m
+Generates NPP figure in SI
+
